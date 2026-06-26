@@ -1,15 +1,11 @@
 # Vehicle telemetry deployment
 
-This standalone package runs Node-RED, InfluxDB, and Grafana without requiring
-the ESP32 firmware source repository.
-
 The package includes the provisioned Node-RED flow and Grafana dashboard used by
 the vehicle telemetry stack, including the DTC monitor and Clear DTC control.
 
 ## Requirements
 
 - Docker Desktop with Docker Compose
-- the ESP32 and Docker host connected to reachable networks
 
 ## First run
 
