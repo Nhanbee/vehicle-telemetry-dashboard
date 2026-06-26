@@ -1,0 +1,1518 @@
+[
+  {
+    "id": "3259f366d7d180ae",
+    "type": "tab",
+    "label": "Data Collection",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "4de365a76f97eebd",
+    "type": "tab",
+    "label": "Vehicle Data",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "a0787989.60ff68",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "59fa9cbf.d826e4",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-dark",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#2d4149",
+        "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#097479",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#4B7930",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#097479",
+          "value": "#097479",
+          "edited": true
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#097479",
+          "edited": false
+        },
+        "page-backgroundColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#0eb8c0",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#555555",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#eeeeee",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#097479",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey"
+      }
+    },
+    "site": {
+      "name": "Node-RED Dashboard",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "true",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 48,
+        "sy": 48,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "73ba227b.d4268c",
+    "type": "ui_tab",
+    "name": "Vehicle Dashboard",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "4955b274.f686fc",
+    "type": "ui_tab",
+    "name": "Supported PIDs",
+    "icon": "dashboard",
+    "order": 2,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "ca933f68.465ec",
+    "type": "ui_group",
+    "name": "Dashboard",
+    "tab": "73ba227b.d4268c",
+    "order": 1,
+    "disp": true,
+    "width": 24,
+    "collapse": false
+  },
+  {
+    "id": "79773aa7.ee2b54",
+    "type": "ui_group",
+    "name": "First Block",
+    "tab": "4955b274.f686fc",
+    "order": 1,
+    "disp": true,
+    "width": 8,
+    "collapse": false
+  },
+  {
+    "id": "7205b3ec.ec834c",
+    "type": "ui_group",
+    "name": "Second Block",
+    "tab": "4955b274.f686fc",
+    "order": 2,
+    "disp": true,
+    "width": 8,
+    "collapse": false
+  },
+  {
+    "id": "4b9732f9.30b35c",
+    "type": "ui_group",
+    "name": "Engine",
+    "tab": "73ba227b.d4268c",
+    "order": 99,
+    "disp": false,
+    "width": 1,
+    "collapse": false
+  },
+  {
+    "id": "0de986d546ada06b",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "fcf93a8a79b4200c",
+    "type": "websocket-listener",
+    "d": true,
+    "path": "",
+    "wholemsg": "false"
+  },
+  {
+    "id": "1a7c6f8c03016c3f",
+    "type": "ui_group",
+    "name": "Temperature",
+    "tab": "73ba227b.d4268c",
+    "order": 99,
+    "disp": false,
+    "width": 1,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "26e0b92ff941b32c",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "c4a6b74a24ae8d2f",
+    "type": "ui_tab",
+    "name": "OBD Dashboard",
+    "icon": "dashboard",
+    "order": 3,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "c466502a4a36f223",
+    "type": "ui_group",
+    "name": "Engine",
+    "tab": "c4a6b74a24ae8d2f",
+    "order": 1,
+    "disp": true,
+    "width": 12,
+    "collapse": false
+  },
+  {
+    "id": "2fbde9ba5f9ebaa1",
+    "type": "ui_group",
+    "name": "Vehicle",
+    "tab": "c4a6b74a24ae8d2f",
+    "order": 2,
+    "disp": true,
+    "width": 12,
+    "collapse": false
+  },
+  {
+    "id": "d8f58a46d37c8ad5",
+    "type": "mqtt-broker",
+    "name": "Car Digital Display",
+    "broker": "127.0.0.1",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "3d1720901d3ad1ba",
+    "type": "ui_tab",
+    "name": "Engine Temperature & Tire Pressure",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "9492832c1227a32b",
+    "type": "ui_tab",
+    "name": "Fuel Consumption & Speed",
+    "icon": "dashboard",
+    "order": 2,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "e277a0a4da35a598",
+    "type": "ui_tab",
+    "name": "Seat Belt Engagement & Doors",
+    "icon": "dashboard",
+    "order": 3,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "561fc813c8756776",
+    "type": "ui_tab",
+    "name": "Cabin Temperatures, air Quality & weather",
+    "icon": "dashboard",
+    "order": 4,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "fe0f0d80e92b1e38",
+    "type": "ui_group",
+    "name": "Engine Temperature & Tire Pressure",
+    "tab": "3d1720901d3ad1ba",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": true
+  },
+  {
+    "id": "876f099b54c7fe85",
+    "type": "ui_group",
+    "name": "Fuel Consumption &  Speed",
+    "tab": "9492832c1227a32b",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "7ff60ea5ebc840d4",
+    "type": "ui_group",
+    "name": "Seat Belt Engagement & Doors",
+    "tab": "e277a0a4da35a598",
+    "order": 1,
+    "disp": true,
+    "width": "15",
+    "collapse": false
+  },
+  {
+    "id": "0edf94b55d229c8a",
+    "type": "ui_group",
+    "name": "Display",
+    "tab": "561fc813c8756776",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "991d61b4458f1627",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "a0526bfcb72982d6",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "6176617c99109516",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "204b1ced55d5ed2f",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "2e8cc118e3294cd7",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "0f8717cc79c0c81a",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "d7968b80ccfe5576",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "f8c76efbe3541901",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "42e9032617dc9d65",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "da00a942938a2fa4",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "0e45b1c504276e62",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "2a817ee22ed716f5",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "fdb35ad144e38662",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "5ad536a0c195334a",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "20188289b96214c2",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "ed5eb9e07493304b",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "c1020fef473cf2e4",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "c8d97e419f72dd67",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "9f05e28459cf2e55",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "dbda609663e0fbd9",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "d7f68735ae658658",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "70bd843a71b1695a",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "94cc5a6bd2519e07",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "844637cf489eb9dd",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "7ddc6764305f4c25",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "f6d2836d2101ed48",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "2414b8908945fe22",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "cfccf45cf1720024",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "68e57ef753eff9a3",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "a5999c893f2c479a",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "3083eecaaab468ed",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "9929542e65a85087",
+    "type": "websocket-listener",
+    "path": "${ESP32_WS_URL}",
+    "wholemsg": "false"
+  },
+  {
+    "id": "2ff91cc88122875c",
+    "type": "influxdb",
+    "hostname": "influxdb",
+    "port": 8086,
+    "protocol": "http",
+    "database": "database",
+    "name": "Influxdb",
+    "usetls": false,
+    "tls": "",
+    "influxdbVersion": "2.0",
+    "url": "http://influxdb:8086",
+    "timeout": 10,
+    "rejectUnauthorized": true
+  },
+  {
+    "id": "d797ea8b2e43aab1",
+    "type": "websocket in",
+    "z": "3259f366d7d180ae",
+    "name": "WebSocket",
+    "server": "3083eecaaab468ed",
+    "client": "",
+    "x": 110,
+    "y": 220,
+    "wires": [
+      [
+        "64338665660a2734",
+        "cccabc43c7aa2e0c"
+      ]
+    ]
+  },
+  {
+    "id": "a52a247049276875",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Parse Lawicel OBD Response",
+    "func": "var payload = msg.payload;\nif (Buffer.isBuffer(payload)) {\n    payload = payload.toString();\n}\n\npayload = String(payload || '').trim();\nif (!payload) {\n    return null;\n}\n\nmsg.TYPE = payload[0];\n\nif (msg.TYPE == 't' || msg.TYPE == 'T') {\n    var isExtended = msg.TYPE == 'T';\n    var idStart = 1;\n    var idLength = isExtended ? 8 : 3;\n    var dlcIndex = idStart + idLength;\n    var dlc = parseInt(payload[dlcIndex], 16);\n\n    if (!Number.isFinite(dlc) || dlc > 8) {\n        return null;\n    }\n\n    var dataStart = dlcIndex + 1;\n    var expectedLength = dataStart + (dlc * 2);\n\n    if (payload.length < expectedLength && !isExtended && payload[idStart + idLength] == '0') {\n        // Tolerate old test frames that accidentally inserted one extra 0 after the standard ID.\n        dlcIndex++;\n        dlc = parseInt(payload[dlcIndex], 16);\n        dataStart = dlcIndex + 1;\n        expectedLength = dataStart + (dlc * 2);\n    }\n\n    if (!Number.isFinite(dlc) || dlc > 8 || payload.length < expectedLength) {\n        return null;\n    }\n\n    msg.ID = payload.substr(idStart, idLength).toUpperCase();\n    msg.DLC = dlc;\n    msg.DATA = payload.substr(dataStart, msg.DLC * 2).toUpperCase();\n    msg.BYTES = [\"-\", \"-\", \"-\", \"-\", \"-\", \"-\", \"-\", \"-\"];\n    msg.TIMESTAMP = payload.substr(dataStart + msg.DLC * 2, 4);\n    msg.SYSTIME = payload.substr(dataStart + msg.DLC * 2 + 4, 6);\n\n    var position = 0;\n    var byte = 0;\n\n    while (position < (msg.DLC * 2) && byte < 8) {\n        msg.BYTES[byte] = parseInt(msg.DATA.substr(position, 2), 16);\n        byte++;\n        position = position + 2;\n    }\n\n    var canId = parseInt(msg.ID, 16);\n    msg.OBD_MODE = msg.BYTES[1];\n    msg.OBD_MODE_HEX = Number.isFinite(msg.OBD_MODE)\n        ? '0x' + msg.OBD_MODE.toString(16).toUpperCase().padStart(2, '0')\n        : undefined;\n\n    if (msg.OBD_MODE == 0x41) {\n        msg.PID = msg.BYTES[2];\n        msg.PID_HEX = '0x' + msg.PID.toString(16).toUpperCase().padStart(2, '0');\n    } else if (msg.OBD_MODE == 0x43) {\n        // Mode 03 response: stored Diagnostic Trouble Codes.\n        msg.PID = null;\n        msg.PID_HEX = 'DTC';\n    } else {\n        return null;\n    }\n\n    if (0x7E8 <= canId && canId <= 0x7EF) {\n        return msg;\n    }\n}\n\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 490,
+    "y": 220,
+    "wires": [
+      [
+        "2a48745ade93deef",
+        "6da0f7e497161c0c",
+        "f95f7a92c5d0dtc1"
+      ]
+    ]
+  },
+  {
+    "id": "2a48745ade93deef",
+    "type": "switch",
+    "z": "3259f366d7d180ae",
+    "name": "",
+    "property": "PID_HEX",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "0x0C",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x0D",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x05",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x04",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x11",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x0F",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x10",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x2F",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x42",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x21",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x0B",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x0E",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x1F",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x31",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x46",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0x5C",
+        "vt": "str"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 16,
+    "x": 710,
+    "y": 220,
+    "wires": [
+      [
+        "8ecb756d1a7e56cd"
+      ],
+      [
+        "39a9779edd3ceb36"
+      ],
+      [
+        "c8ed2cf349fc1631"
+      ],
+      [
+        "9f013a22a24f47bf"
+      ],
+      [
+        "0b886eedac7686d1"
+      ],
+      [
+        "722166315d6ecd2f"
+      ],
+      [
+        "c85ce48a27080948"
+      ],
+      [
+        "3ef29288bde45cb4"
+      ],
+      [
+        "abd8246b636d8138"
+      ],
+      [
+        "f4465c5f01162852"
+      ],
+      [
+        "423db7b22b4d2127"
+      ],
+      [
+        "78c6ece1a3c0f74a"
+      ],
+      [
+        "928fa9408b6fef3b"
+      ],
+      [
+        "c728b4eaed38fa50"
+      ],
+      [
+        "4f89986ca53fddb4"
+      ],
+      [
+        "e116a354c153dab0"
+      ]
+    ]
+  },
+  {
+    "id": "6da0f7e497161c0c",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "PIDs",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 670,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "64338665660a2734",
+    "type": "split",
+    "z": "3259f366d7d180ae",
+    "name": "",
+    "splt": "[13]",
+    "spltType": "bin",
+    "arraySplt": "1",
+    "arraySpltType": "len",
+    "stream": true,
+    "addname": "",
+    "x": 270,
+    "y": 220,
+    "wires": [
+      [
+        "a52a247049276875",
+        "f134608e8313d0a8"
+      ]
+    ]
+  },
+  {
+    "id": "cccabc43c7aa2e0c",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "Incoming String",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 320,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "f134608e8313d0a8",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "Parsed Frame",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 440,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "8ecb756d1a7e56cd",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Engine RPM",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = Math.round(((A * 256) + B) / 4);\nmsg.topic = 'rpm';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 950,
+    "y": 40,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "39a9779edd3ceb36",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Vehicle Speed",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = A;\nmsg.topic = 'speed';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 80,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "c8ed2cf349fc1631",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Coolant Temp",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = A - 40;\nmsg.topic = 'coolant';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 120,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "9f013a22a24f47bf",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Engine Load",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = Number((A * 100 / 255).toFixed(1));\nmsg.topic = 'load';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 950,
+    "y": 160,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "0b886eedac7686d1",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Throttle Position",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = Number((A * 100 / 255).toFixed(1));\nmsg.topic = 'throttle';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 200,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "722166315d6ecd2f",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Intake Air Temp",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = A - 40;\nmsg.topic = 'intake';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 240,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "c85ce48a27080948",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "MAF Airflow",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = Number((((A * 256) + B) / 100).toFixed(2));\nmsg.topic = 'maf';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 950,
+    "y": 280,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "3ef29288bde45cb4",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Fuel Level",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = Number((A * 100 / 255).toFixed(1));\nmsg.topic = 'fuel';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 950,
+    "y": 320,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "abd8246b636d8138",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Module Voltage",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = Number((((A * 256) + B) / 1000).toFixed(2));\nmsg.topic = 'voltage';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 360,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "f4465c5f01162852",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Distance MIL On",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = (A * 256) + B;\nmsg.topic = 'mil';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 970,
+    "y": 400,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "18328a54287db8b3",
+    "type": "ui_template",
+    "z": "3259f366d7d180ae",
+    "group": "ca933f68.465ec",
+    "name": "Full OBD Dashboard",
+    "order": 1,
+    "width": 24,
+    "height": 20,
+    "format": "<style>\nbody.nr-dashboard-theme,\n.nr-dashboard-theme md-content {\n    overflow-x: hidden !important;\n    overflow-y: auto !important;\n    min-height: 100vh !important;\n    background:\n        radial-gradient(circle at 8% 0%, rgba(145, 190, 65, 0.46), transparent 34%),\n        radial-gradient(circle at 92% 96%, rgba(14, 160, 150, 0.44), transparent 34%),\n        linear-gradient(135deg, #142217 0%, #0b1c18 48%, #082b31 100%) !important;\n    color: #f8fff9 !important;\n}\n\n.nr-dashboard-theme md-toolbar {\n    background: rgba(13, 24, 21, 0.86) !important;\n    box-shadow: none !important;\n}\n\n.nr-dashboard-theme md-toolbar .md-toolbar-tools {\n    height: 60px !important;\n    padding: 0 32px !important;\n    font-size: 25px !important;\n    font-weight: 800 !important;\n}\n\n.nr-dashboard-theme md-content > div {\n    width: 100% !important;\n    max-width: none !important;\n    margin: 0 !important;\n    padding: 38px 64px 64px !important;\n    box-sizing: border-box !important;\n}\n\n.nr-dashboard-theme ui-card-panel,\n.nr-dashboard-theme md-card,\n.nr-dashboard-theme md-card > div,\n.nr-dashboard-theme .nr-dashboard-template,\n.nr-dashboard-theme .nr-dashboard-template > div {\n    width: 100% !important;\n    max-width: none !important;\n    min-width: 0 !important;\n    overflow: visible !important;\n    background: transparent !important;\n    box-shadow: none !important;\n    border: 0 !important;\n}\n\n.nr-dashboard-theme md-card {\n    margin: 0 !important;\n}\n\n.nr-dashboard-theme .nr-dashboard-cardtitle {\n    display: none !important;\n}\n\n.obd-board {\n    width: min(1500px, calc(100vw - 160px));\n    max-width: 1500px;\n    min-width: 0;\n    margin: 0 auto;\n    padding: 0 0 72px;\n    box-sizing: border-box;\n}\n\n.obd-section-title {\n    display: inline-flex;\n    align-items: center;\n    min-width: 118px;\n    height: 32px;\n    margin: 0 0 12px;\n    padding: 0 16px;\n    border-radius: 7px;\n    background: rgba(28, 36, 32, 0.78);\n    border: 1px solid rgba(255,255,255,0.10);\n    color: #f4fff7;\n    font-size: 19px;\n    font-weight: 900;\n    text-shadow: 0 2px 10px rgba(0,0,0,0.30);\n}\n\n.obd-grid {\n    display: grid;\n    grid-template-columns: repeat(5, minmax(180px, 1fr));\n    gap: 22px;\n    margin-bottom: 32px;\n}\n\n.obd-tile {\n    position: relative;\n    height: 180px;\n    min-width: 0;\n    overflow: hidden;\n    border-radius: 9px;\n    border: 1px solid rgba(255,255,255,0.12);\n    background: linear-gradient(135deg, rgba(49, 59, 52, 0.88), rgba(20, 30, 27, 0.86));\n    box-shadow: 0 16px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.07);\n    color: #f8fff9;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n.obd-tile::before {\n    content: \"\";\n    position: absolute;\n    inset: 0;\n    background:\n        linear-gradient(118deg, rgba(255,255,255,0.075), transparent 35%),\n        linear-gradient(111deg, transparent 0 46%, rgba(0,0,0,0.18) 47% 61%, transparent 62%);\n    pointer-events: none;\n}\n\n.obd-head {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 14px 16px 0;\n    color: rgba(255,255,255,0.9);\n    font-size: 15px;\n    font-weight: 850;\n    line-height: 1.18;\n}\n\n.obd-icon {\n    color: var(--accent);\n    font-size: 27px;\n    line-height: 1;\n}\n\n.obd-value {\n    position: relative;\n    z-index: 2;\n    margin-top: 11px;\n    text-align: center;\n    font-size: 34px;\n    font-weight: 900;\n    line-height: 1;\n    text-shadow: 0 3px 12px rgba(0,0,0,0.35);\n}\n\n.obd-unit {\n    margin-left: 5px;\n    color: rgba(255,255,255,0.88);\n    font-size: 15px;\n    font-weight: 900;\n}\n\n.semi {\n    --pct: 0;\n    position: relative;\n    z-index: 1;\n    width: 150px;\n    height: 75px;\n    margin: 18px auto 0;\n    overflow: hidden;\n}\n\n.semi::before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 150px;\n    height: 150px;\n    border-radius: 50%;\n    background: conic-gradient(from 270deg, var(--accent) calc(var(--pct) * 1.8deg), rgba(255,255,255,0.13) 0 180deg, transparent 0);\n}\n\n.semi::after {\n    content: \"\";\n    position: absolute;\n    left: 24px;\n    top: 24px;\n    width: 102px;\n    height: 102px;\n    border-radius: 50%;\n    background: #13221e;\n}\n\n.needle {\n    position: absolute;\n    z-index: 3;\n    left: 75px;\n    bottom: -2px;\n    width: 52px;\n    height: 8px;\n    background: #f8fbff;\n    clip-path: polygon(0 50%, 100% 0, 100% 100%);\n    transform-origin: 0 50%;\n    transform: rotate(calc(-180deg + (var(--pct) * 1.8deg)));\n    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.35));\n}\n\n.scale {\n    position: absolute;\n    z-index: 4;\n    left: 10px;\n    right: 10px;\n    bottom: 0;\n    display: flex;\n    justify-content: space-between;\n    color: #fff;\n    font-size: 12px;\n    font-weight: 900;\n}\n\n.scale-unit {\n    position: absolute;\n    z-index: 4;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    text-align: center;\n    color: #fff;\n    font-size: 12px;\n    font-weight: 900;\n}\n\n.donut-wrap {\n    --pct: 0;\n    position: relative;\n    z-index: 1;\n    width: 104px;\n    height: 104px;\n    margin: 18px auto 0;\n    border-radius: 50%;\n    background: conic-gradient(var(--accent) calc(var(--pct) * 1%), rgba(255,255,255,0.13) 0);\n}\n\n.donut-wrap::after {\n    content: \"\";\n    position: absolute;\n    inset: 18px;\n    border-radius: 50%;\n    background: #13221e;\n}\n\n.donut-value {\n    position: absolute;\n    z-index: 2;\n    inset: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 30px;\n    font-weight: 900;\n}\n\n.compact-body {\n    position: relative;\n    z-index: 1;\n    height: 132px;\n    display: grid;\n    grid-template-columns: 74px 1fr;\n    align-items: center;\n    padding: 0 22px;\n}\n\n.compact-body .obd-icon {\n    text-align: center;\n    font-size: 42px;\n}\n\n.compact-body .obd-value {\n    margin-top: 0;\n    text-align: left;\n}\n\n@media (max-width: 1280px) {\n    .nr-dashboard-theme md-content > div {\n        padding: 28px 42px 54px !important;\n    }\n    .obd-board {\n        width: 100%;\n    }\n    .obd-grid {\n        grid-template-columns: repeat(3, minmax(180px, 1fr));\n    }\n}\n\n@media (max-width: 760px) {\n    .nr-dashboard-theme md-content > div {\n        padding: 22px 16px 48px !important;\n    }\n    .obd-grid {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n        gap: 10px;\n    }\n}\n\n@media (max-width: 520px) {\n    .obd-grid {\n        grid-template-columns: 1fr;\n    }\n    .obd-tile {\n        height: 176px;\n    }\n}\n\n/* hide dashboard scrollbars */\nhtml,\nbody,\nbody.nr-dashboard-theme,\n.nr-dashboard-theme,\n.nr-dashboard-theme md-content,\n.nr-dashboard-theme md-content > div,\n.obd-board {\n    scrollbar-width: none !important;\n    -ms-overflow-style: none !important;\n}\n\nhtml::-webkit-scrollbar,\nbody::-webkit-scrollbar,\nbody.nr-dashboard-theme::-webkit-scrollbar,\n.nr-dashboard-theme::-webkit-scrollbar,\n.nr-dashboard-theme md-content::-webkit-scrollbar,\n.nr-dashboard-theme md-content > div::-webkit-scrollbar,\n.obd-board::-webkit-scrollbar {\n    width: 0 !important;\n    height: 0 !important;\n    display: none !important;\n}\n\n\n.dtc-panel {\n    position: relative;\n    overflow: hidden;\n    min-height: 120px;\n    margin-bottom: 32px;\n    padding: 22px 26px;\n    border-radius: 10px;\n    border: 1px solid rgba(255,255,255,0.14);\n    background: linear-gradient(135deg, rgba(70, 35, 35, 0.90), rgba(22, 29, 28, 0.88));\n    box-shadow: 0 16px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.07);\n}\n\n.dtc-title {\n    color: rgba(255,255,255,0.92);\n    font-size: 16px;\n    font-weight: 900;\n    letter-spacing: 0.03em;\n    text-transform: uppercase;\n}\n\n.dtc-codes {\n    margin-top: 18px;\n    color: #ffcf6a;\n    font-size: 34px;\n    font-weight: 950;\n    line-height: 1.2;\n    word-break: break-word;\n}\n\n.dtc-help {\n    margin-top: 8px;\n    color: rgba(255,255,255,0.68);\n    font-size: 13px;\n    font-weight: 700;\n}\n\n</style>\n\n<div class=\"obd-board\" ng-init=\"v = v || {}\">\n  <h2 class=\"obd-section-title\">Current Data</h2>\n  <div class=\"obd-grid\">\n    <div class=\"obd-tile\" style=\"--accent:#27a7d8\">\n      <div class=\"obd-head\"><span>Vehicle Speed</span><span class=\"obd-icon\">⌁</span></div>\n      <div class=\"obd-value\">{{display(v.speed)}}<span class=\"obd-unit\">km/h</span></div>\n      <div class=\"semi\" style=\"--pct:{{pct(v.speed, 0, 240)}}\"><div class=\"needle\"></div><div class=\"scale\"><span>0</span><span>240</span></div><div class=\"scale-unit\">km/h</div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#f8dc4a\">\n      <div class=\"obd-head\"><span>Fuel Level</span><span class=\"obd-icon\">⛽</span></div>\n      <div class=\"donut-wrap\" style=\"--pct:{{pct(v.fuel, 0, 100)}}\"><div class=\"donut-value\">{{display(v.fuel)}}<span class=\"obd-unit\">%</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#78e35f\">\n      <div class=\"obd-head\"><span>Module Voltage</span><span></span></div>\n      <div class=\"compact-body\"><div class=\"obd-icon\">▣</div><div class=\"obd-value\">{{display(v.voltage)}}<span class=\"obd-unit\">V</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#f08b57\">\n      <div class=\"obd-head\"><span>Distance MIL On</span><span></span></div>\n      <div class=\"compact-body\"><div class=\"obd-icon\">⚠</div><div class=\"obd-value\">{{display(v.mil)}}<span class=\"obd-unit\">km</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#80de5f\">\n      <div class=\"obd-head\"><span>MAF Airflow</span><span class=\"obd-icon\">≋</span></div>\n      <div class=\"obd-value\">{{display(v.maf)}}<span class=\"obd-unit\">g/s</span></div>\n      <div class=\"semi\" style=\"--pct:{{pct(v.maf, 0, 300)}}\"><div class=\"needle\"></div><div class=\"scale\"><span>0</span><span>300</span></div><div class=\"scale-unit\">g/s</div></div>\n    </div>\n  </div>\n  <div class=\"obd-grid\">\n    <div class=\"obd-tile\" style=\"--accent:#78e35f\">\n      <div class=\"obd-head\"><span>Engine RPM</span><span class=\"obd-icon\">↻</span></div>\n      <div class=\"obd-value\">{{display(v.rpm)}}<span class=\"obd-unit\">rpm</span></div>\n      <div class=\"semi\" style=\"--pct:{{pct(v.rpm, 0, 8000)}}\"><div class=\"needle\"></div><div class=\"scale\"><span>0</span><span>8000</span></div><div class=\"scale-unit\">rpm</div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#f08b57\">\n      <div class=\"obd-head\"><span>Coolant Temp</span><span></span></div>\n      <div class=\"compact-body\"><div class=\"obd-icon\">♨</div><div class=\"obd-value\">{{display(v.coolant)}}<span class=\"obd-unit\">°C</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#ef6a5b\">\n      <div class=\"obd-head\"><span>Engine Load</span><span class=\"obd-icon\">⚙</span></div>\n      <div class=\"donut-wrap\" style=\"--pct:{{pct(v.load, 0, 100)}}\"><div class=\"donut-value\">{{display(v.load)}}<span class=\"obd-unit\">%</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#f8dc4a\">\n      <div class=\"obd-head\"><span>Throttle Position</span><span class=\"obd-icon\">◒</span></div>\n      <div class=\"donut-wrap\" style=\"--pct:{{pct(v.throttle, 0, 100)}}\"><div class=\"donut-value\">{{display(v.throttle)}}<span class=\"obd-unit\">%</span></div></div>\n    </div>\n\n    <div class=\"obd-tile\" style=\"--accent:#27a7d8\">\n      <div class=\"obd-head\"><span>Intake Air Temp</span><span></span></div>\n      <div class=\"compact-body\"><div class=\"obd-icon\">🌡</div><div class=\"obd-value\">{{display(v.intake)}}<span class=\"obd-unit\">°C</span></div></div>\n    </div>\n  </div>\n\n  <h2 class=\"obd-section-title\">Diagnostics</h2>\n  <div class=\"dtc-panel\">\n    <div class=\"dtc-title\">Diagnostic Trouble Codes</div>\n    <div class=\"dtc-codes\">{{v.dtc || 'Waiting for DTC scan...'}}</div>\n    <div class=\"dtc-help\">Mode 03 stored DTCs · refreshes from the ECU response 0x43</div>\n  </div>\n</div>\n\n<script>\n(function(scope) {\n    scope.v = scope.v || {};\n\n    function num(value) {\n        var parsed = Number(value);\n        return isFinite(parsed) ? parsed : 0;\n    }\n\n    scope.pct = function(value, min, max) {\n        var output = ((num(value) - min) * 100) / (max - min);\n        return Math.max(0, Math.min(100, output));\n    };\n\n    scope.display = function(value) {\n        var output = num(value);\n        return Number.isInteger(output) ? output : output.toFixed(1);\n    };\n\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.topic) {\n            return;\n        }\n\n        scope.v[msg.topic] = msg.payload;\n    });\n})(scope);\n</script>",
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1620,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7bdf36e73ea40af2",
+    "type": "inject",
+    "z": "3259f366d7d180ae",
+    "name": "Dashboard OBD Test Frames",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "t7E8804410C1AF8000000\rt7E8803410D3C00000000\rt7E880341055A00000000\rt7E88034104800000000\rt7E88034111660000000\rt7E8803410F4600000000\rt7E880441101388000000\rt7E8803412F9900000000\rt7E8804414230D4000000\rt7E88044121001E000000\r",
+    "payloadType": "str",
+    "x": 160,
+    "y": 380,
+    "wires": [
+      [
+        "64338665660a2734"
+      ]
+    ]
+  },
+  {
+    "id": "3f63c99967e8eb1b",
+    "type": "inject",
+    "z": "3259f366d7d180ae",
+    "name": "Cycle OBD PID Requests",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "0.5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 500,
+    "wires": [
+      [
+        "97657b3fa08f86d7"
+      ]
+    ]
+  },
+  {
+    "id": "97657b3fa08f86d7",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Build OBD PID Request",
+    "func": "var pids = [\n    \"0C\", \"0D\", \"05\", \"04\", \"11\", \"0F\", \"10\", \"2F\",\n    \"42\", \"21\", \"0B\", \"0E\", \"1F\", \"31\", \"46\", \"5C\"\n];\nvar index = context.get('index') || 0;\nvar pid = pids[index % pids.length];\ncontext.set('index', index + 1);\n\n// Standard OBD-II functional request: ID 7DF, DLC 8, data 02 01 PID 00 00 00 00 00.\nmsg.payload = 't7DF80201' + pid + '0000000000\\r';\nmsg.topic = 'obd-request-' + pid;\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 500,
+    "wires": [
+      [
+        "1347641e8ede070a"
+      ]
+    ]
+  },
+  {
+    "id": "1347641e8ede070a",
+    "type": "websocket out",
+    "z": "3259f366d7d180ae",
+    "name": "Send OBD Requests",
+    "server": "0de986d546ada06b",
+    "client": "",
+    "x": 700,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "288007a94ea4427b",
+    "type": "influxdb out",
+    "z": "3259f366d7d180ae",
+    "influxdb": "2ff91cc88122875c",
+    "name": "Save Vehicle Data",
+    "measurement": "vehicle_telemetry",
+    "precision": "",
+    "retentionPolicy": "",
+    "database": "database",
+    "precisionV18FluxV20": "ms",
+    "retentionPolicyV18Flux": "",
+    "org": "vehicle-prj",
+    "bucket": "vehicle-data",
+    "x": 1730,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "4e591040b9827cd0",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "process all PIDs",
+    "func": "const A = Number(msg.BYTES[3]);\nconst B = Number(msg.BYTES[4]);\n\nlet field;\nlet value;\n\nswitch (msg.PID_HEX) {\n    case \"0x0C\":\n        field = \"rpm\";\n        value = ((A * 256) + B) / 4;\n        break;\n\n    case \"0x0D\":\n        field = \"speed\";\n        value = A;\n        break;\n\n    case \"0x05\":\n        field = \"coolant\";\n        value = A - 40;\n        break;\n\n    case \"0x04\":\n        field = \"engine_load\";\n        value = A * 100 / 255;\n        break;\n\n    case \"0x11\":\n        field = \"throttle\";\n        value = A * 100 / 255;\n        break;\n\n    case \"0x0F\":\n        field = \"intake_temp\";\n        value = A - 40;\n        break;\n\n    case \"0x10\":\n        field = \"maf\";\n        value = ((A * 256) + B) / 100;\n        break;\n\n    case \"0x2F\":\n        field = \"fuel_level\";\n        value = A * 100 / 255;\n        break;\n\n    case \"0x42\":\n        field = \"module_voltage\";\n        value = ((A * 256) + B) / 1000;\n        break;\n\n    case \"0x21\":\n        field = \"distance_mil\";\n        value = (A * 256) + B;\n        break;\n\n    case \"0x0B\":\n        field = \"intake_pressure\";\n        value = A;\n        break;\n\n    case \"0x0E\":\n        field = \"timing_advance\";\n        value = A / 2 - 64;\n        break;\n\n    case \"0x1F\":\n        field = \"engine_runtime\";\n        value = (A * 256) + B;\n        break;\n\n    case \"0x31\":\n        field = \"distance_cleared\";\n        value = (A * 256) + B;\n        break;\n\n    case \"0x46\":\n        field = \"ambient_temp\";\n        value = A - 40;\n        break;\n\n    case \"0x5C\":\n        field = \"oil_temp\";\n        value = A - 40;\n        break;\n\n    default:\n        return null;\n}\n\nif (!Number.isFinite(value)) {\n    return null;\n}\n\nmsg.topic = field;\n\n// Object đầu là fields, object sau là tags.\nmsg.payload = [\n    {\n        [field]: Number(value.toFixed(2))\n    },\n    {\n        vehicle_id: \"vehicle-01\",\n        device_id: \"esp32-can-01\"\n    }\n];\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1520,
+    "y": 420,
+    "wires": [
+      [
+        "288007a94ea4427b",
+        "376d8e9f857a9535"
+      ]
+    ]
+  },
+  {
+    "id": "7ea92b3d2af55c22",
+    "type": "inject",
+    "z": "3259f366d7d180ae",
+    "name": "test rmp",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "rpm",
+    "payload": "1000",
+    "payloadType": "num",
+    "x": 1340,
+    "y": 660,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "376d8e9f857a9535",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1720,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "423db7b22b4d2127",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Intake manifold absolute pressure",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = A ;\nmsg.topic = 'intakepressure';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1020,
+    "y": 440,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "78c6ece1a3c0f74a",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Timing advance",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = (A/2 - 64) ;\nmsg.topic = 'timingadvance';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 960,
+    "y": 480,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "928fa9408b6fef3b",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Run time since engine start",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = ((256 * A) + B) ;\nmsg.topic = 'runtime';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 520,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "c728b4eaed38fa50",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Distance traveled since codes cleared",
+    "func": "var A = msg.BYTES[3];\nvar B = msg.BYTES[4];\nmsg.payload = ((256 * A) + B) ;\nmsg.topic = 'distance';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1030,
+    "y": 560,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "4f89986ca53fddb4",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Ambient air temperature",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = (A - 40) ;\nmsg.topic = 'ambient';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 990,
+    "y": 600,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "e116a354c153dab0",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Engine Oil Temperature",
+    "func": "var A = msg.BYTES[3];\nmsg.payload = A - 40;\nmsg.topic = \"oil_temp\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 990,
+    "y": 640,
+    "wires": [
+      [
+        "4e591040b9827cd0"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc1",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Parse DTC Response",
+    "func": "if (msg.OBD_MODE !== 0x43) {\n    return null;\n}\n\nfunction decodeDtc(a, b) {\n    if (!Number.isFinite(a) || !Number.isFinite(b) || (a === 0 && b === 0)) {\n        return null;\n    }\n\n    const systems = ['P', 'C', 'B', 'U'];\n    const system = systems[(a & 0xC0) >> 6];\n    const firstDigit = (a & 0x30) >> 4;\n    const secondDigit = (a & 0x0F).toString(16).toUpperCase();\n    const thirdDigit = ((b & 0xF0) >> 4).toString(16).toUpperCase();\n    const fourthDigit = (b & 0x0F).toString(16).toUpperCase();\n\n    return system + firstDigit + secondDigit + thirdDigit + fourthDigit;\n}\n\nconst codes = [];\nfor (let i = 2; i + 1 < msg.BYTES.length; i += 2) {\n    const code = decodeDtc(Number(msg.BYTES[i]), Number(msg.BYTES[i + 1]));\n    if (code) {\n        codes.push(code);\n    }\n}\n\nconst codeText = codes.length ? codes.join(', ') : 'NONE';\n\nconst uiMsg = {\n    topic: 'dtc',\n    payload: codes.length ? codeText : 'No stored DTC',\n    dtc_codes: codes,\n    source: msg.ID\n};\n\nconst influxMsg = {\n    topic: 'dtc',\n    payload: [\n        {\n            dtc_count: codes.length,\n            dtc_codes: codeText\n        },\n        {\n            vehicle_id: 'vehicle-01',\n            device_id: 'esp32-can-01',\n            source_ecu: msg.ID\n        }\n    ]\n};\n\nreturn [uiMsg, influxMsg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 720,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "f95f7a92c5d0dtc3"
+      ],
+      [
+        "f95f7a92c5d0dtc2"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc2",
+    "type": "influxdb out",
+    "z": "3259f366d7d180ae",
+    "influxdb": "2ff91cc88122875c",
+    "name": "Save DTC Data",
+    "measurement": "vehicle_dtc",
+    "precision": "",
+    "retentionPolicy": "",
+    "database": "database",
+    "precisionV18FluxV20": "ms",
+    "retentionPolicyV18Flux": "",
+    "org": "vehicle-prj",
+    "bucket": "vehicle-data",
+    "x": 1280,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "f95f7a92c5d0dtc3",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "DTC Codes",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 1260,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "f95f7a92c5d0dtc4",
+    "type": "inject",
+    "z": "3259f366d7d180ae",
+    "name": "Read DTCs every 30s",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "30",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 2,
+    "topic": "",
+    "payload": "t7DF80203000000000000\\r",
+    "payloadType": "str",
+    "x": 150,
+    "y": 720,
+    "wires": [
+      [
+        "1347641e8ede070a"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc5",
+    "type": "inject",
+    "z": "3259f366d7d180ae",
+    "name": "Test DTC P0133",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "P0133",
+    "payloadType": "str",
+    "x": 140,
+    "y": 760,
+    "wires": [
+      [
+        "f95f7a92c5d0dtc6"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc6",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Build Test DTC Point",
+    "func": "const codes = String(msg.payload || 'P0133')\n    .split(',')\n    .map(code => code.trim().toUpperCase())\n    .filter(Boolean);\n\nconst codeText = codes.length ? codes.join(', ') : 'NONE';\n\nconst uiMsg = {\n    topic: 'dtc',\n    payload: codes.length ? codeText : 'No stored DTC',\n    dtc_codes: codes,\n    source: 'TEST'\n};\n\nconst influxMsg = {\n    topic: 'dtc',\n    payload: [\n        {\n            dtc_count: codes.length,\n            dtc_codes: codeText\n        },\n        {\n            vehicle_id: 'vehicle-01',\n            device_id: 'esp32-can-01',\n            source_ecu: 'TEST'\n        }\n    ]\n};\n\nreturn [uiMsg, influxMsg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 410,
+    "y": 760,
+    "wires": [
+      [
+        "18328a54287db8b3",
+        "f95f7a92c5d0dtc3"
+      ],
+      [
+        "f95f7a92c5d0dtc2"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc7",
+    "type": "http in",
+    "z": "3259f366d7d180ae",
+    "name": "HTTP Clear DTC",
+    "url": "/clear-dtc",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 140,
+    "y": 840,
+    "wires": [
+      [
+        "f95f7a92c5d0dtc8"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc8",
+    "type": "function",
+    "z": "3259f366d7d180ae",
+    "name": "Validate Clear DTC Request",
+    "func": "const query = (msg.req && msg.req.query) || {};\nconst confirmed = String(query.confirm || '').toUpperCase() === 'YES';\n\nmsg.headers = {\n    'Content-Type': 'application/json; charset=utf-8',\n    'Cache-Control': 'no-store'\n};\n\nif (!confirmed) {\n    msg.statusCode = 400;\n    msg.payload = {\n        ok: false,\n        error: 'Missing confirmation. Open /clear-dtc?confirm=YES to send OBD Mode 04.',\n        warning: 'Clearing DTCs can remove stored trouble codes, freeze-frame data, and readiness information.'\n    };\n    return [null, null, msg];\n}\n\nconst command = 't7DF80204000000000000\\r';\nconst requestedAt = new Date().toISOString();\n\nconst canMsg = {\n    topic: 'clear-dtc',\n    payload: command\n};\n\nconst influxMsg = {\n    topic: 'clear-dtc-event',\n    payload: [\n        {\n            clear_dtc_count: 1,\n            action: 'clear_dtc',\n            status: 'requested'\n        },\n        {\n            vehicle_id: 'vehicle-01',\n            device_id: 'esp32-can-01',\n            source: 'grafana'\n        }\n    ]\n};\n\nmsg.statusCode = 202;\nmsg.payload = {\n    ok: true,\n    action: 'clear_dtc',\n    requested_at: requestedAt,\n    command: command.replace('\\r', '\\\\r'),\n    warning: 'Clear DTC command requested. Re-read DTCs after a few seconds to confirm ECU state.'\n};\n\nreturn [canMsg, influxMsg, msg];",
+    "outputs": 3,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 420,
+    "y": 840,
+    "wires": [
+      [
+        "1347641e8ede070a",
+        "f95f7a92c5d0dtc11"
+      ],
+      [
+        "f95f7a92c5d0dtc10"
+      ],
+      [
+        "f95f7a92c5d0dtc9"
+      ]
+    ]
+  },
+  {
+    "id": "f95f7a92c5d0dtc9",
+    "type": "http response",
+    "z": "3259f366d7d180ae",
+    "name": "Clear DTC HTTP Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 720,
+    "y": 900,
+    "wires": []
+  },
+  {
+    "id": "f95f7a92c5d0dtc10",
+    "type": "influxdb out",
+    "z": "3259f366d7d180ae",
+    "influxdb": "2ff91cc88122875c",
+    "name": "Save Clear DTC Event",
+    "measurement": "vehicle_dtc_events",
+    "precision": "",
+    "retentionPolicy": "",
+    "database": "database",
+    "precisionV18FluxV20": "ms",
+    "retentionPolicyV18Flux": "",
+    "org": "vehicle-prj",
+    "bucket": "vehicle-data",
+    "x": 720,
+    "y": 840,
+    "wires": []
+  },
+  {
+    "id": "f95f7a92c5d0dtc11",
+    "type": "debug",
+    "z": "3259f366d7d180ae",
+    "name": "Clear DTC Command",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 720,
+    "y": 800,
+    "wires": []
+  }
+]
